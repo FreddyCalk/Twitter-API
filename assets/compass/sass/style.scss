@@ -1,20 +1,24 @@
 @import 'vars';
 
 header {
+	position: relative;
 	background-color: $mainBackground;
 	#header-content {
 		width: 1024px;
 		margin: auto;
-		@include tablet {
-
-		}
 		#trump-img {
-				margin-left: 20px;
-				margin-right: 45px;
-				transform: rotate(-12deg);
+			margin-top: 35px;
+			margin-left: 20px;
+			margin-right: 45px;
+			transform: rotate(-12deg);
 		}
 		.header-image {
 			width: 200px;
+			margin-right: 35px;
+			@include tablet {
+				display: block;	
+				margin: auto;		
+			}
 			h1 {
 				background-color: $trumpBlue;
 				font-size: 32px;
@@ -25,23 +29,22 @@ header {
 				background-color: white;
 				color: white;
 			}
-			img {
-				width: 100%;
-				margin-top: 20px;
-				transform: rotate(-12deg);
-			}
 		}
 		div {
 			display: inline-block;
-			width: 250px;
+			width: 370px;
 			vertical-align: top;
 			margin: 30px 0;
+			@include tablet {
+				display: block;	
+				width: 80%;
+				margin: auto;		
+			}
 			p {
 				text-align: left;
 				margin: 20px;
 				font-size: 24px;
 				color: white;
-				height: 150px;
 			}
 			button {
 				margin-left: 20px;
@@ -52,7 +55,27 @@ header {
 	}
 }
 
-.more-tweets {
+#more-tweets.fix-nav {
+	position: fixed;
+	top: 0;
+	z-index: 8888;
+	:before {
+		opacity: 1;
+	}
+}
+
+#more-tweets {
 	width: 100%;
-	
+	height: 50px;
+	background-color: $trumpBlue;
+	text-align: center;
+	color: white;
+	font-size: 24px;
+}
+
+#tweets {
+}
+
+#tweets.top-scrolled {
+	margin-top: 55px;
 }
