@@ -1,7 +1,7 @@
-var myApp = angular.module('twitterApp',[])
+var twitterApp = angular.module('twitterApp',['ngRoute']);
 
 twitterApp.config(function($routeProvider){
-	%routeProvider.when('/',{
+	$routeProvider.when('/',{
 		templateURL: 'index.html',
 		controller: 'twitterController'
 	}).
@@ -14,26 +14,26 @@ twitterApp.config(function($routeProvider){
 	});
 })
 
-myApp.controller('twitterController',twitterController)
+twitterApp.controller('twitterController',twitterController);
 
 
-	var twitterController =	function ($scope,$http){
-	var apiKey = 'xlAgMS5Vz808jUe429KWaV7vyrtaEEpFas0>B';
-	var searchTerm = "trump";
-	var twitterURL = 'https://api.twitter.com/1.1/search/tweets.json?q=%23'+searchTerm+'&since_id='+apiKey;
-	console.log(twitterURL)
-		$http.get(twitterURL).success(function (tweetData){
-			console.log(tweetData);
-			$scope.tweetText = tweetData.text;
-			$scope.tweetUser = tweetData.user;
-			$scope.
-		})
+	var twitterController =	function ($scope,$http) {
+		var apiKey = 'xlAgMS5Vz808jUe429KWaV7vyrtaEEpFas0>B';
+		var searchTerm = "trump";
+		var twitterURL = 'https://api.twitter.com/1.1/search/tweets.json?q=%23'+searchTerm+'&since_id='+apiKey;
+		console.log(twitterURL)
+			$http.get(twitterURL).success(function (tweetData) {
+				console.log(tweetData);
+				$scope.tweetText = tweetData.text;
+				$scope.tweetUser = tweetData.user;
+			});
 	}
-myApp.controller('otherController', function($scope,$http, $routeParams){
+
+twitterApp.controller('otherController', function($scope,$http, $routeParams){
 	var firstParam = $routeParams.firstParam;
 	
 	
-})
+});
 
 
 

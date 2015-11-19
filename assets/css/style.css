@@ -89,7 +89,40 @@ header #header-content div button {
   font-size: 24px;
 }
 
-/* line 79, ../compass/sass/style.scss */
+/* line 77, ../compass/sass/style.scss */
+.trump-tweets-container {
+  opacity: 1;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 120px;
+  display: block;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+}
+/* line 86, ../compass/sass/style.scss */
+.trump-tweets-container .trump-tweets.fold-top, .trump-tweets-container .trump-tweets.fold-bottom {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  perspective: 1000;
+  -webkit-perspective: 1000;
+  -webkit-transform-style: preserve-3d;
+  -webkit-transform: rotateX(-180deg);
+  -webkit-transform-origin: center top;
+  opacity: 0;
+  top: 1px;
+  left: 1px;
+}
+
+/* line 104, ../compass/sass/style.scss */
+.trump-tweets {
+  background: url("../images/sample-cover.jpg");
+  width: 100%;
+  height: 70vh;
+}
+
+/* line 111, ../compass/sass/style.scss */
 #tweets.top-scrolled {
   margin-top: 55px;
 }
