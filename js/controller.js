@@ -1,39 +1,34 @@
-var myApp = angular.module('twitterApp',[])
+var twitterApp = angular.module('twitterApp',[]);
 
-twitterApp.config(function($routeProvider){
-	%routeProvider.when('/',{
-		templateURL: 'index.html',
-		controller: 'twitterController'
-	}).
-	when('/:firstParam',{
-		templateURL: 'pages/otherTweets.html',
-		controller: 'otherController'
-	}).
-	otherwise({
-		redirectTo: '/'
-	});
-})
+	// twitterApp.config(function($routeProvider){
+	// 	$routeProvider.when('/',{
+	// 		templateURL: 'index.html',
+	// 		controller: 'twitterController'
+	// 	}).
+	// 	when('/:firstParam',{
+	// 		templateURL: 'pages/otherTweets.html',
+	// 		controller: 'otherController'
+	// 	}).
+	// 	otherwise({
+	// 		redirectTo: '/'
+	// 	});
+	// })
 
-myApp.controller('twitterController',twitterController)
+	twitterApp.controller('twitterController',function ($scope,$http){
 
+		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump&secondHash=women';	
+			$http.get(twitterURL).success(function (tweetData){
+				console.log(tweetData);
+				$scope.tweets = tweetData.statuses;
 
-	var twitterController =	function ($scope,$http){
-	var apiKey = 'xlAgMS5Vz808jUe429KWaV7vyrtaEEpFas0>B';
-	var searchTerm = "trump";
-	var twitterURL = 'https://api.twitter.com/1.1/search/tweets.json?q=%23'+searchTerm+'&since_id='+apiKey;
-	console.log(twitterURL)
-		$http.get(twitterURL).success(function (tweetData){
-			console.log(tweetData);
-			$scope.tweetText = tweetData.text;
-			$scope.tweetUser = tweetData.user;
-			$scope.
-		})
-	}
-myApp.controller('otherController', function($scope,$http, $routeParams){
-	var firstParam = $routeParams.firstParam;
+			})
+	})
+
+// twitterApp.controller('otherController', function($scope,$http, $routeParams){
+// 	var firstParam = $routeParams.firstParam;
 	
 	
-})
+// })
 
 
 

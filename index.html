@@ -6,38 +6,42 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/angular.min.js"></script>
-	<script src="js/angular-routing.min.js"></script>
+	<!-- // <script src="js/angular-routing.min.js"></script> -->
+	<script src="js/controller.js"></script>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	
 </head>
 <body ng-controller = "twitterController">
 
-<header>
-	<div id="header-content">
-		<div class="header-image">
-			<h1>The</h1>
-			<h1 class="stripe">Donald</h1>
-			<h1>Trump</h1>	
-		</div>
-		<img id="trump-img" src="assets/images/trump-hair.jpg">
-		<div>
-			<p>Your favorite racist Trump tweets
-			</p>	
-			<button class="btn btn-primary lrg">El Trump</button>
-		</div>
-	
-		<div>
-			<p>Whats the best worst Trump tweets about women
-			</p>
-			<button class="btn btn-primary lrg">Trump Jewels</button>
-		</div>
+	<header>
+		<div id="header-content">
+			<div class="header-image">
+				<h1>The</h1>
+				<h1 class="stripe">Donald</h1>
+				<h1>Trump</h1>	
+			</div>
+			<img id="trump-img" src="assets/images/trump-hair.jpg">
+			<div>
+				<p>Your favorite racist Trump tweets
+				</p>	
+				<button class="btn btn-primary btn-lg">El Trump</button>
+			</div>
 		
+			<div>
+				<p>Whats the best worst Trump tweets about women
+				</p>
+				<button class="btn btn-primary btn-lg">Trump Jewels</button>
+			</div>
+			
+		</div>
+	</header>
+	<p id="more-tweets">
+		<div ng-repeat="tweet in tweets">
+		<img src="{{tweet.user.profile_banner_url}}">
+		@{{tweet.user.name}}: {{tweet.text}}</div>
+	</p>
+	<div ng-view>
 	</div>
-</header>
-<p class="more-tweets">
-</p>
-<div ng-view>
-</div>
 
 </body>
 </html>
