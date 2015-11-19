@@ -67,8 +67,32 @@ header #header-content div button {
 
 /* line 61, ../compass/sass/style.scss */
 .text-holder {
+  width: 80%;
+  margin: auto;
   position: relative;
-  top: -250px;
+  top: 100px;
   font-size: 48px;
   color: white;
+  z-index: 1;
+}
+
+/* line 70, ../compass/sass/style.scss */
+.text-holder::after {
+  content: "";
+  background-color: black;
+  position: absolute;
+  opacity: 0.7;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+/* line 82, ../compass/sass/style.scss */
+.background-image {
+  background-size: cover;
+  height: 70vh;
+  opacity: 0.9;
+  background-position: 50%;
 }
