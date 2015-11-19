@@ -23,26 +23,27 @@ header #header-content .header-image h1 {
   font-size: 32px;
   color: white;
   text-align: center;
+  margin: 0;
 }
-/* line 24, ../compass/sass/style.scss */
+/* line 25, ../compass/sass/style.scss */
 header #header-content .header-image .stripe {
   background-color: white;
   color: white;
 }
-/* line 28, ../compass/sass/style.scss */
+/* line 29, ../compass/sass/style.scss */
 header #header-content .header-image img {
   width: 100%;
   margin-top: 20px;
   transform: rotate(-12deg);
 }
-/* line 34, ../compass/sass/style.scss */
+/* line 35, ../compass/sass/style.scss */
 header #header-content div {
   display: inline-block;
   width: 250px;
   vertical-align: top;
   margin: 30px 0;
 }
-/* line 39, ../compass/sass/style.scss */
+/* line 40, ../compass/sass/style.scss */
 header #header-content div p {
   text-align: left;
   margin: 20px;
@@ -50,14 +51,14 @@ header #header-content div p {
   color: white;
   height: 150px;
 }
-/* line 46, ../compass/sass/style.scss */
+/* line 47, ../compass/sass/style.scss */
 header #header-content div button {
   margin-left: 20px;
   background-color: #2b325f;
   border-color: #2b325f;
 }
 
-/* line 55, ../compass/sass/style.scss */
+/* line 56, ../compass/sass/style.scss */
 .bold {
   font-weight: bold;
   font-family: impact;
@@ -65,7 +66,7 @@ header #header-content div button {
   color: green;
 }
 
-/* line 61, ../compass/sass/style.scss */
+/* line 62, ../compass/sass/style.scss */
 .text-holder {
   width: 80%;
   margin: auto;
@@ -76,7 +77,7 @@ header #header-content div button {
   z-index: 1;
 }
 
-/* line 70, ../compass/sass/style.scss */
+/* line 71, ../compass/sass/style.scss */
 .text-holder::after {
   content: "";
   background-color: black;
@@ -89,7 +90,7 @@ header #header-content div button {
   right: 0;
 }
 
-/* line 82, ../compass/sass/style.scss */
+/* line 83, ../compass/sass/style.scss */
 .background-image {
   background-size: cover;
   height: 70vh;
