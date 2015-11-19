@@ -54,11 +54,17 @@ header {
 
 .bold{
 	font-weight: bold;
+	font-family: impact;
+	font-size: 48px;
+	color: green;
+}
+.text-holder{
+	position:relative;
+	top:-250px;
+	font-size: 48px;
+	color:white;
 }
 
-.more-tweets {
-	width: 100%;	
-}
 
 
 
