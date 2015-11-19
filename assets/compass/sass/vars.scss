@@ -1,0 +1,16 @@
+$mainBackground : #861a0e;
+$trumpBlue : #2b325f;
+$tabletWidth : 768px;
+$desktopWidth : 1024px;
+
+@mixin tablet {
+	@media (min-width: #{$tabletWidth}) and (max-width: #{$desktopWidth}) {
+		@content;
+	}
+}
+
+@mixin desktop {
+	@media (min-width: #{$desktopWidth}) {
+		@content;
+	}
+}
