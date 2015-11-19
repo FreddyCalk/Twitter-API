@@ -58,6 +58,11 @@ header #header-content div button {
 }
 
 /* line 55, ../compass/sass/style.scss */
+.bold {
+  font-weight: bold;
+}
+
+/* line 59, ../compass/sass/style.scss */
 .more-tweets {
   width: 100%;
 }
