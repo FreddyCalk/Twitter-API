@@ -6,12 +6,12 @@
 	<link rel="stylesheet" href="assets/css/style.css">
 	<script src="js/jquery.min.js"></script>
 	<script src="js/angular.min.js"></script>
-	<!-- // <script src="js/angular-routing.min.js"></script> -->
+	<script src="js/angular-routing.min.js"></script>
 	<script src="js/controller.js"></script>
 	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
 	
 </head>
-<body ng-controller = "twitterController">
+<body >
 
 	<header>
 		<div id="header-content">
@@ -35,15 +35,8 @@
 			
 		</div>
 	</header>
-	<p id="more-tweets">
-		<div ng-repeat="tweet in tweets">
-			<img src="{{tweet.user.profile_banner_url}}" height="700" width="100%">
-			<div class='text-holder'>
-				<span class="bold">@{{tweet.user.name}}:</span> {{tweet.text}}
-			</div>
-		</div>
-	</p>
 	<div ng-view>
+
 	</div>
 
 </body>
