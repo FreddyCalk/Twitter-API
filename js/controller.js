@@ -19,6 +19,7 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 			$http.get(twitterURL).success(function (tweetData){
 				$scope.tweets.image = tweetData.statuses.user.profile_banner_url;
 				for (i=0;i<tweetdata.statuses.length;i++) {
+					tweetData.statuses[i].created_at = timePosted(tweetData.statuses,i);
 					if($scope.tweets[i].user.profile_banner_url == null) {
 						$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
 					}
@@ -35,13 +36,11 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 			$scope.timePosted = [];
 			$scope.tweets = tweetData.statuses;
 			for(i=0;i<tweetData.statuses.length;i++){
-				tweetData.statuses.created_at = timePosted(tweetData.statuses,i);
-				
+				tweetData.statuses[i].created_at = timePosted(tweetData.statuses,i);
 				if($scope.tweets[i].user.profile_banner_url == null) {
 					$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
 				}
 			}
-
 		})
 	})
 
