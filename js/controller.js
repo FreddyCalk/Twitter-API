@@ -9,6 +9,10 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 			templateUrl: 'pages/other-tweets.html',
 			controller: 'otherController'
 		}).
+		when('/:firstParam/:secondParam',{
+			templateUrl: 'pages/other-tweets.html',
+			controller: 'thirdController'
+		}).
 		otherwise({
 			redirectTo: '/'
 		});
@@ -17,14 +21,12 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 		
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump';	
 			$http.get(twitterURL).success(function (tweetData){
-
-				$scope.tweets.image = tweetData.statuses.user.profile_banner_url;
+				$scope.tweets = tweetData.statuses;
 				for (i=0;i<tweetdata.statuses.length;i++) {
 					tweetData.statuses[i].created_at = timePosted(tweetData.statuses,i);
 					if($scope.tweets[i].user.profile_banner_url == null) {
 						$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
 					}
-					$scope.tweets.created_at = timePosted($scope.tweets,i);
 				};
 			})
 	})
@@ -32,9 +34,24 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 	twitterApp.controller('otherController', function($scope,$http, $routeParams){
 		var searchVar = $routeParams.firstParam;
 		var secondVar = '&secondHash='+searchVar;
-		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump'+secondVar;
+		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash='+searchVar;
 		$http.get(twitterURL).success(function (tweetData){
-			$scope.timePosted = [];
+			$scope.tweets = tweetData.statuses;
+			for(i=0;i<tweetData.statuses.length;i++){
+				tweetData.statuses[i].created_at = timePosted(tweetData.statuses,i);
+				if($scope.tweets[i].user.profile_banner_url == null) {
+					$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
+				}
+			}
+
+		})
+	})
+
+	twitterApp.controller('thirdController', function($scope,$http, $routeParams){
+		var searchVar = $routeParams.firstParam;
+		var secondVar = '&secondHash='+$routeParams.secondParam;
+		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash='+searchVar+secondVar;
+		$http.get(twitterURL).success(function (tweetData){
 			$scope.tweets = tweetData.statuses;
 			for(i=0;i<tweetData.statuses.length;i++){
 				tweetData.statuses[i].created_at = timePosted(tweetData.statuses,i);
