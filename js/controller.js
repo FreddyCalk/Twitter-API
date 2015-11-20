@@ -17,11 +17,12 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 		
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump';	
 			$http.get(twitterURL).success(function (tweetData){
-				$scope.tweets = tweetData.statuses;
-				for (i=0;i<$scope.tweets.length;i++) {
+				$scope.tweets.image = tweetData.statuses.user.profile_banner_url;
+				for (i=0;i<tweetdata.statuses.length;i++) {
 					if($scope.tweets[i].user.profile_banner_url == null) {
 						$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
 					}
+					$scope.tweets.created_at = timePosted($scope.tweets,i);
 				};
 			})
 	})
@@ -31,16 +32,44 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 		var secondVar = '&secondHash='+searchVar;
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump'+secondVar;
 		$http.get(twitterURL).success(function (tweetData){
+			$scope.timePosted = [];
 			$scope.tweets = tweetData.statuses;
-			for(i=0;i<$scope.tweets.length;i++){
+			for(i=0;i<tweetData.statuses.length;i++){
+				tweetData.statuses.created_at = timePosted(tweetData.statuses,i);
+				
 				if($scope.tweets[i].user.profile_banner_url == null) {
 					$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
 				}
 			}
+
 		})
 	})
 
+function timePosted(data,index){
+		timeString = data[index].created_at.slice(11,data[index].created_at.indexOf('+')-1);
+		var hourMinSec = timeString.split(':');
+		if((hourMinSec[0]<=24)&&(hourMinSec[0]>=5)){
+			hourMinSec[0]-=5;
+		}else{
+			hourMinSec[0] = 24-(5-hourMinSec[0]);
+		}
+		var currentTime = new Date();
+		var hours = currentTime.getHours();
+		var minutes = currentTime.getMinutes();
+		var seconds = currentTime.getSeconds();
+		currentHourMinSec = [hours,minutes,seconds];
+		var hourDiff = currentHourMinSec[0]-hourMinSec[0];
+		var minDiff = currentHourMinSec[1]-hourMinSec[1];
+		var secDiff = currentHourMinSec[2]-hourMinSec[2];
+		if((hourDiff === 0)&&(minDiff === 0)){
+			return secDiff+" seconds ago";
+		}else if(hourDiff === 0){
+			return minDiff+" minutes ago";
+		}else{
+			return hourDiff+" hours ago";
+		}
 
+}
 
 
 
