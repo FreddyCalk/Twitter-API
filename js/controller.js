@@ -1,4 +1,4 @@
-var twitterApp = angular.module('twitterApp',['ngRoute']);
+var twitterApp = angular.module('twitterApp',['ngRoute','ngCookies']);
 
 	twitterApp.config(function($routeProvider){
 		$routeProvider.when('/',{
@@ -17,7 +17,7 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 			redirectTo: '/'
 		});
 	});
-	twitterApp.controller('twitterController',function ($scope, $http){
+	twitterApp.controller('twitterController',['$cookies','$cookieStore','$scope','$window',function ($cookies,$cookieStore,$window,$scope,$http){
 		
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump';	
 			$http.get(twitterURL).success(function (tweetData){
@@ -29,9 +29,9 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 					}
 				};
 			})
-	})
+	}])
 
-	twitterApp.controller('otherController', function($scope,$http, $routeParams){
+	twitterApp.controller('otherController',['$cookies','$cookieStore','$scope','$window', function ($cookies,$cookieStore,$window,$scope,$http,$routeParams){
 		var searchVar = $routeParams.firstParam;
 		var secondVar = '&secondHash='+searchVar;
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash='+searchVar;

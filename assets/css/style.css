@@ -4,18 +4,19 @@ header {
 }
 /* line 5, ../compass/sass/style.scss */
 header #header-content {
+  padding-top: 15px;
   width: 1024px;
   margin: auto;
   font-family: 'Handlee', cursive;
 }
-/* line 12, ../compass/sass/style.scss */
+/* line 13, ../compass/sass/style.scss */
 header #header-content h1 {
   font-size: 32px;
   color: white;
   text-align: center;
   margin: 0;
 }
-/* line 18, ../compass/sass/style.scss */
+/* line 19, ../compass/sass/style.scss */
 header #header-content img {
   margin: 0 45px 45px 20px;
   transform: rotate(-12deg);
@@ -23,43 +24,43 @@ header #header-content img {
   margin-top: 20px;
   transform: rotate(-12deg);
 }
-/* line 25, ../compass/sass/style.scss */
+/* line 26, ../compass/sass/style.scss */
 header #header-content div {
   display: inline-block;
   text-align: center;
   vertical-align: top;
   margin: 30px 0;
 }
-/* line 30, ../compass/sass/style.scss */
+/* line 31, ../compass/sass/style.scss */
 header #header-content div p {
   text-align: left;
   margin: 20px;
   font-size: 24px;
   color: white;
 }
-/* line 36, ../compass/sass/style.scss */
+/* line 37, ../compass/sass/style.scss */
 header #header-content div button {
   background-color: #2b325f;
   border-color: #2b325f;
 }
-/* line 41, ../compass/sass/style.scss */
+/* line 42, ../compass/sass/style.scss */
 header #header-content #middle-img {
   transform: rotate(12deg);
 }
 
-/* line 47, ../compass/sass/style.scss */
+/* line 48, ../compass/sass/style.scss */
 .twitter-feed {
   margin-top: 60px;
 }
 
-/* line 51, ../compass/sass/style.scss */
+/* line 52, ../compass/sass/style.scss */
 #more-tweets.fix-nav {
   position: fixed;
   top: 0;
   z-index: 999999;
 }
 
-/* line 57, ../compass/sass/style.scss */
+/* line 58, ../compass/sass/style.scss */
 #more-tweets {
   width: 100%;
   text-align: center;
@@ -70,7 +71,7 @@ header #header-content #middle-img {
   margin: 0;
 }
 
-/* line 67, ../compass/sass/style.scss */
+/* line 68, ../compass/sass/style.scss */
 .bold {
   font-weight: bold;
   font-family: impact;
@@ -78,7 +79,7 @@ header #header-content #middle-img {
   color: green;
 }
 
-/* line 73, ../compass/sass/style.scss */
+/* line 74, ../compass/sass/style.scss */
 .text-holder {
   width: 60%;
   margin: auto;
@@ -91,7 +92,7 @@ header #header-content #middle-img {
   text-align: center;
 }
 
-/* line 84, ../compass/sass/style.scss */
+/* line 85, ../compass/sass/style.scss */
 .text-holder:after {
   content: "";
   background-color: black;
@@ -105,7 +106,7 @@ header #header-content #middle-img {
   border-radius: 10px;
 }
 
-/* line 97, ../compass/sass/style.scss */
+/* line 98, ../compass/sass/style.scss */
 .background-image {
   background-size: cover;
   height: 70vh;
