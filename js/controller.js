@@ -17,9 +17,8 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 		
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump';	
 			$http.get(twitterURL).success(function (tweetData){
-
-				$scope.tweets.image = tweetData.statuses.user.profile_banner_url;
-				for (i=0;i<tweetdata.statuses.length;i++) {
+				$scope.tweets = tweetData.statuses;
+				for (i=0;i<tweetData.statuses.length;i++) {
 					tweetData.statuses[i].created_at = timePosted(tweetData.statuses,i);
 					if($scope.tweets[i].user.profile_banner_url == null) {
 						$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";

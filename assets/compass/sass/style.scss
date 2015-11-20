@@ -5,8 +5,15 @@ header {
 	#header-content {
 		width: 1024px;
 		margin: auto;
+		font-family: 'Handlee', cursive;
 		@include tablet {
 
+		}
+		h1 {
+				font-size: 32px;
+				color: white;
+				text-align: center;
+				margin:0;
 		}
 		#trump-img {
 				margin-left: 20px;
@@ -15,13 +22,7 @@ header {
 		}
 		.header-image {
 			width: 200px;
-			h1 {
-				background-color: $trumpBlue;
-				font-size: 32px;
-				color: white;
-				text-align: center;
-				margin:0;
-			}
+			
 			.stripe {
 				background-color: white;
 				color: white;
@@ -53,6 +54,7 @@ header {
 }
 // *************STICKY NAV ************ //
 .twitter-feed {
+	margin-top: 60px;
 }
 
 #more-tweets.fix-nav {
