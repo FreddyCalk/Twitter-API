@@ -18,11 +18,10 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump';	
 			$http.get(twitterURL).success(function (tweetData){
 				$scope.tweets = tweetData.statuses;
-				for (var i = 0; i < $scope.tweetData.length; i++) {
-					if($scope.tweetData[i].user.profile_banner_url == null) {
-						$scope.tweetData[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
+				for (i=0;i<$scope.tweets.length;i++) {
+					if($scope.tweets[i].user.profile_banner_url == null) {
+						$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
 					}
-					console.log($scope.tweetData[i].user.profile_banner_url);
 				};
 			})
 	})
@@ -33,11 +32,11 @@ var twitterApp = angular.module('twitterApp',['ngRoute']);
 		var twitterURL = 'http://ec2-52-34-116-224.us-west-2.compute.amazonaws.com/trump-tweets/?hash=trump'+secondVar;
 		$http.get(twitterURL).success(function (tweetData){
 			$scope.tweets = tweetData.statuses;
-			if($scope.tweetData[i].user.profile_banner_url == null) {
-						$scope.tweetData[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
+			for(i=0;i<$scope.tweets.length;i++){
+				if($scope.tweets[i].user.profile_banner_url == null) {
+					$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
+				}
 			}
-					console.log($scope.tweetData[i].user.profile_banner_url);
-
 		})
 	})
 
