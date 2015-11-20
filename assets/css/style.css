@@ -96,16 +96,8 @@ header #header-content div button {
   text-align: center;
 }
 
-<<<<<<< HEAD
 /* line 89, ../compass/sass/style.scss */
 .text-holder::after {
-||||||| merged common ancestors
-/* line 71, ../compass/sass/style.scss */
-.text-holder::after {
-=======
-/* line 73, ../compass/sass/style.scss */
-.text-holder:after {
->>>>>>> origin/master
   content: "";
   background-color: black;
   position: absolute;
@@ -118,13 +110,6 @@ header #header-content div button {
   border-radius: 10px;
 }
 
-<<<<<<< HEAD
-/* line 101, ../compass/sass/style.scss */
-||||||| merged common ancestors
-/* line 83, ../compass/sass/style.scss */
-=======
-/* line 86, ../compass/sass/style.scss */
->>>>>>> origin/master
 .background-image {
   background-size: cover;
   height: 70vh;
