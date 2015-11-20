@@ -10,32 +10,21 @@ header {
 
 		}
 		h1 {
-				font-size: 32px;
-				color: white;
-				text-align: center;
-				margin:0;
+			font-size: 32px;
+			color: white;
+			text-align: center;
+			margin:0;
 		}
-		#trump-img {
-				margin-left: 20px;
-				margin-right: 45px;
-				transform: rotate(-12deg);
-		}
-		.header-image {
+		img {
+			margin:0 45px 45px 20px;
+			transform: rotate(-12deg);
 			width: 200px;
-			
-			.stripe {
-				background-color: white;
-				color: white;
-			}
-			img {
-				width: 100%;
-				margin-top: 20px;
-				transform: rotate(-12deg);
-			}
+			margin-top: 20px;
+			transform: rotate(-12deg);
 		}
 		div {
 			display: inline-block;
-			// width: 250px;
+			text-align: center;
 			vertical-align: top;
 			margin: 30px 0;
 			p {
@@ -45,10 +34,12 @@ header {
 				color: white;
 			}
 			button {
-				margin-left: 20px;
 				background-color: $trumpBlue;
 				border-color: $trumpBlue;
 			}
+		}
+		#middle-img {
+			transform: rotate(12deg);
 		}
 	}
 }
