@@ -65,6 +65,18 @@ header {
 	margin: 0;
 }
 /////////////////////////////////////
+
+// **************SCROLL ANIMATION************ //
+
+.hidden {
+	opacity: 0;
+}
+
+.visible {
+	opacity: 1;
+}
+
+////////////////////////////////////
 .bold{
 	font-weight: bold;
 	font-family: impact;

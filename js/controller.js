@@ -28,8 +28,8 @@ var twitterApp = angular.module('twitterApp',['ngRoute','ngCookies']);
 						$scope.tweets[i].user.profile_banner_url = "assets/images/sample-cover.jpg";
 					}
 				};
-			})
-	}])
+			});
+	}]);
 
 	twitterApp.controller('otherController',['$cookies','$cookieStore','$scope','$window', function ($cookies,$cookieStore,$window,$scope,$http,$routeParams){
 		var searchVar = $routeParams.firstParam;
@@ -44,8 +44,8 @@ var twitterApp = angular.module('twitterApp',['ngRoute','ngCookies']);
 				}
 			}
 
-		})
-	})
+		});
+	}]);
 
 	twitterApp.controller('thirdController', function($scope,$http, $routeParams){
 		var searchVar = $routeParams.firstParam;

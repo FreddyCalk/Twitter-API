@@ -9,3 +9,9 @@ $(window).scroll(function() {
 	}
 });
 
+$(document).ready(function() {
+	$('.post').addClass('hidden').viewportChecker({
+		classToAdd: 'visible animated zoomInDown',
+		offset: 100
+	});	
+});
