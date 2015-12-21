@@ -9,58 +9,57 @@ header #header-content {
   margin: auto;
   font-family: 'Handlee', cursive;
 }
-/* line 13, ../compass/sass/style.scss */
+/* line 10, ../compass/sass/style.scss */
 header #header-content h1 {
   font-size: 32px;
   color: white;
   text-align: center;
   margin: 0;
 }
-/* line 19, ../compass/sass/style.scss */
+/* line 16, ../compass/sass/style.scss */
 header #header-content img {
   margin: 0 45px 45px 20px;
   transform: rotate(-12deg);
   width: 200px;
   margin-top: 20px;
-  transform: rotate(-12deg);
 }
-/* line 26, ../compass/sass/style.scss */
+/* line 22, ../compass/sass/style.scss */
 header #header-content div {
   display: inline-block;
   text-align: center;
   vertical-align: top;
   margin: 30px 0;
 }
-/* line 31, ../compass/sass/style.scss */
+/* line 27, ../compass/sass/style.scss */
 header #header-content div p {
   text-align: left;
   margin: 20px;
   font-size: 24px;
   color: white;
 }
-/* line 37, ../compass/sass/style.scss */
+/* line 33, ../compass/sass/style.scss */
 header #header-content div button {
   background-color: #2b325f;
   border-color: #2b325f;
 }
-/* line 42, ../compass/sass/style.scss */
+/* line 38, ../compass/sass/style.scss */
 header #header-content #middle-img {
   transform: rotate(12deg);
 }
 
-/* line 48, ../compass/sass/style.scss */
+/* line 44, ../compass/sass/style.scss */
 .twitter-feed {
   margin-top: 60px;
 }
 
-/* line 52, ../compass/sass/style.scss */
+/* line 48, ../compass/sass/style.scss */
 #more-tweets.fix-nav {
   position: fixed;
   top: 0;
   z-index: 999999;
 }
 
-/* line 58, ../compass/sass/style.scss */
+/* line 54, ../compass/sass/style.scss */
 #more-tweets {
   width: 100%;
   text-align: center;
@@ -68,58 +67,49 @@ header #header-content #middle-img {
   color: white;
   height: 60px;
   position: absolute;
-  margin: 0;
+  margin: 0px;
 }
 
-/* line 71, ../compass/sass/style.scss */
+/* line 67, ../compass/sass/style.scss */
 .hidden {
   opacity: 0;
 }
 
-/* line 75, ../compass/sass/style.scss */
+/* line 71, ../compass/sass/style.scss */
 .visible {
   opacity: 1;
 }
 
-/* line 80, ../compass/sass/style.scss */
-.bold {
+/* line 76, ../compass/sass/style.scss */
+.tweet-wrapper {
+  height: 670px;
+}
+
+/* line 79, ../compass/sass/style.scss */
+.text-holder {
+  width: 60%;
+  position: relative;
+  top: -450px;
+  margin: auto;
+  background-color: grey;
+  opacity: 0.9;
+  font-size: 36px;
+  color: white;
+  z-index: 1;
+  text-align: center;
+}
+/* line 90, ../compass/sass/style.scss */
+.text-holder .bold {
   font-weight: bold;
   font-family: impact;
   font-size: 48px;
   color: green;
 }
 
-/* line 86, ../compass/sass/style.scss */
-.text-holder {
-  width: 60%;
-  margin: auto;
-  position: relative;
-  top: 100px;
-  font-size: 36px;
-  color: white;
-  z-index: 1;
-  padding: 15px;
-  text-align: center;
-}
-
-/* line 97, ../compass/sass/style.scss */
-.text-holder:after {
-  content: "";
-  background-color: black;
-  position: absolute;
-  opacity: 0.7;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  border-radius: 10px;
-}
-
-/* line 110, ../compass/sass/style.scss */
+/* line 99, ../compass/sass/style.scss */
 .background-image {
-  background-size: cover;
   height: 70vh;
+  background: no-repeat;
+  width: 100vw;
   opacity: 0.9;
-  background-position: 50%;
 }
