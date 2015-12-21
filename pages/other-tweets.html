@@ -1,9 +1,0 @@
-<p class="twitter-feed container">
-	<div class="post" ng-repeat="tweet in tweets">
-		<!-- <img src="{{tweet.user.profile_banner_url}}" height="700" width="100%"> -->
-		<div class="background-image" ng-style="{'background-image':'url({{tweet.user.profile_banner_url}})'}">
-		<div class='text-holder'>
-			<span class="bold">@{{tweet.user.screen_name}} :</span> {{tweet.text}}<br>Posted: {{tweet.created_at}}
-		</div></div>
-	</div>
-</p>
