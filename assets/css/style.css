@@ -4,6 +4,16 @@ header {
   width: 100vw;
 }
 /* line 6, ../compass/sass/style.scss */
+header #home-button {
+  position: absolute;
+  top: 10px;
+}
+/* line 10, ../compass/sass/style.scss */
+header #home-button button {
+  background-color: #2b325f;
+  border-color: #2b325f;
+}
+/* line 15, ../compass/sass/style.scss */
 header #header-content {
   padding-top: 15px;
   width: 1024px;
@@ -11,74 +21,96 @@ header #header-content {
   margin: auto;
   font-family: 'Handlee', cursive;
 }
-/* line 12, ../compass/sass/style.scss */
+/* line 21, ../compass/sass/style.scss */
 header #header-content h1 {
   font-size: 32px;
   color: white;
   text-align: center;
   margin: 0;
 }
-/* line 18, ../compass/sass/style.scss */
+/* line 27, ../compass/sass/style.scss */
 header #header-content #trump {
   margin-left: 100px;
 }
-/* line 20, ../compass/sass/style.scss */
+/* line 29, ../compass/sass/style.scss */
 header #header-content #trump #left-img {
   margin: 0px 45px 45px 20px;
   transform: rotate(-12deg);
   width: 150px;
   margin-top: 20px;
 }
-/* line 27, ../compass/sass/style.scss */
+/* line 36, ../compass/sass/style.scss */
 header #header-content div {
   display: inline-block;
   text-align: center;
   vertical-align: top;
   margin: 30px 0;
 }
-/* line 32, ../compass/sass/style.scss */
+/* line 41, ../compass/sass/style.scss */
 header #header-content div p {
   text-align: left;
   margin: 20px;
   font-size: 24px;
   color: white;
 }
-/* line 38, ../compass/sass/style.scss */
+/* line 47, ../compass/sass/style.scss */
 header #header-content div button {
   background-color: #2b325f;
   border-color: #2b325f;
 }
-/* line 43, ../compass/sass/style.scss */
+/* line 52, ../compass/sass/style.scss */
 header #header-content #clinton {
   margin: 0px 0px 0px 200px;
 }
-/* line 45, ../compass/sass/style.scss */
+/* line 54, ../compass/sass/style.scss */
 header #header-content #clinton #middle-img {
   transform: rotate(12deg);
   width: 200px;
   margin-top: 80px;
 }
-/* line 50, ../compass/sass/style.scss */
+/* line 59, ../compass/sass/style.scss */
 header #header-content #clinton button {
   background-color: #2b325f;
   border-color: #2b325f;
   display: block;
   margin: 70px 80px;
 }
+/* line 68, ../compass/sass/style.scss */
+header #more-tweets {
+  color: white;
+  font-size: 18px;
+}
+/* line 71, ../compass/sass/style.scss */
+header #more-tweets span {
+  line-height: 60px;
+  font-family: 'Handlee', cursive;
+}
+/* line 75, ../compass/sass/style.scss */
+header #more-tweets .search {
+  color: black;
+  border-radius: 5px;
+}
+/* line 79, ../compass/sass/style.scss */
+header #more-tweets .button {
+  background-color: #861a0e;
+  border-color: #861a0e;
+  color: white;
+  font-family: 'Handlee', cursive;
+}
 
-/* line 61, ../compass/sass/style.scss */
+/* line 88, ../compass/sass/style.scss */
 .twitter-feed {
   margin-top: 60px;
 }
 
-/* line 65, ../compass/sass/style.scss */
+/* line 92, ../compass/sass/style.scss */
 #more-tweets.fix-nav {
   position: fixed;
   top: 0;
   z-index: 999999;
 }
 
-/* line 71, ../compass/sass/style.scss */
+/* line 98, ../compass/sass/style.scss */
 #more-tweets {
   width: 100%;
   text-align: center;
@@ -89,22 +121,22 @@ header #header-content #clinton button {
   margin: 0px;
 }
 
-/* line 84, ../compass/sass/style.scss */
+/* line 111, ../compass/sass/style.scss */
 .hidden {
   opacity: 0;
 }
 
-/* line 88, ../compass/sass/style.scss */
+/* line 115, ../compass/sass/style.scss */
 .visible {
   opacity: 1;
 }
 
-/* line 93, ../compass/sass/style.scss */
+/* line 120, ../compass/sass/style.scss */
 .tweet-wrapper {
   height: 670px;
 }
 
-/* line 96, ../compass/sass/style.scss */
+/* line 123, ../compass/sass/style.scss */
 .text-holder {
   width: 60%;
   position: relative;
@@ -117,7 +149,7 @@ header #header-content #clinton button {
   z-index: 1;
   text-align: center;
 }
-/* line 107, ../compass/sass/style.scss */
+/* line 134, ../compass/sass/style.scss */
 .text-holder .bold {
   font-weight: bold;
   font-family: impact;
@@ -125,7 +157,7 @@ header #header-content #clinton button {
   color: green;
 }
 
-/* line 116, ../compass/sass/style.scss */
+/* line 143, ../compass/sass/style.scss */
 .background-image {
   height: 670px;
   background: no-repeat;

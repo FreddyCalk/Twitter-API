@@ -20,11 +20,14 @@
 
 	<header>
 		<div id="header-content" class="">
+			<a id="home-button" href="#/"><button class="btn btn-primary btn-lg">Home</button></a>
 			<h1>Obnoxious Tweets</h1>
+			
 			<div class="col-sm-4" id="trump">
 				<img id="left-img" src="assets/images/trump-hair.jpg">	
 				<a href="#/trump"><button class="btn btn-primary btn-lg">El Trump-O</button></a>
 			</div>
+			
 
 			<div class="col-sm-4 col-sm-offset-4" id="clinton">
 				<img id="middle-img" src="assets/images/clinton.jpg">
@@ -32,10 +35,15 @@
 			</div>
 		
 		</div>
+		<div id="more-tweets">
+			<form ng-submit="submit()" ng-controller = "search-controller">
+				<span>Search Twitter (Single Word): </span>
+				<input id="search-field" class="search" type="text" ng-model="text" name="text" />
+				<input class="search button" type="submit" id="submit" value="Submit" />
+
+			</form>
+		</div>
 	</header>
-	<div id="more-tweets">
-		<h3>more tweets</h3>
-	</div>
 	<div ng-view>
 
 	</div>
