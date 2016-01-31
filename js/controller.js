@@ -78,6 +78,9 @@ var twitterApp = angular.module('twitterApp',['ngRoute','ngCookies']);
 	twitterApp.controller('search-controller', function ($scope){
 		$scope.submit = function(){
 			var searchTerm = $scope.text.split(" ");
+			if((currentParam !== 'clinton')&&(currentParam !== 'trump')){
+				currentParam = undefined;
+			}
 			if((currentParam)&&($scope.text)){
 				$('#search-field').val("");
 				window.location.href = "#/"+currentParam+"/"+searchTerm[0];
@@ -86,6 +89,7 @@ var twitterApp = angular.module('twitterApp',['ngRoute','ngCookies']);
 				window.location.href = "#/"+searchTerm[0];
 			}
 			currentParam = undefined;
+			
 		}
 	})
 
